@@ -1,40 +1,61 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
 
-		<title>reveal.js</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            gap: 1rem;
+            align-items: stretch;
+        }
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+        .main-frame {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 1rem;
+            align-items: stretch;
+            min-height: 50vh;
+        }
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+        main>section {
+            border: tomato 0.1rem solid;
+            padding: 1rem;
+        }
+    </style>
+</head>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+<body>
+    <header>
+        <h1>Мои презентации</h1>
+    </header>
+    <main class="main-frame">
+        <section>
+            <h2>
+                HTML/CSS
+            </h2>
+            <ul>
+                <li><a href="./source/box-model-and-float.html">box model and float</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>JavaScript</h2>
+        </section>
+        <section>
+            <h2>Java</h2>
+        </section>
+        <section>
+            <h2>Другое</h2>
+        </section>
+    </main>
+    <footer class="footer">
+        ©andron13
+    </footer>
+</body>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
 </html>

@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>box model-and-float.html</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css">
+
+    <style>
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .div-example {
+            height: 5rem;
+            border: 1px tomato solid;
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        .div-example>span {
+            font-size: 4rem;
+            color: red;
+        }
+
+        .parent {
+            height: 500px;
+            width: 500px;
+            border: 1px solid tomato;
+            background-color: rgb(184, 184, 44);
+        }
+
+        .child {
+            height: 100px;
+            width: 100px;
+            border: 0.5rem solid tomato;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <section>
+                    <h1>HTML Elements</h1>
+                    <p>
+                        Every HTML element has a default display value, depending on what type of element it is.
+                    </p>
+                    <p>There are two display values:</p>
+                    <ul>
+                        <li>block</li>
+                        <li>inline</li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="two-columns">
+                        <ul>
+                            <h3>Block</h3>
+                            <li>div</li>
+                            <li>p</li>
+                            <li>header</li>
+                            <li>footer</li>
+                            <li>article</li>
+                            <li>ul, ol,dl</li>
+                        </ul>
+                        <ul>
+                            <h3>Inline</h3>
+                            <li>span</li>
+                            <li>b, strong, em, i</li>
+                            <li>a</li>
+                            <li>❗ img ❗</li>
+                            <li>button</li>
+                            <li>audio, q</li>
+                        </ul>
+                    </div>
+
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>Block Code Example</h2>
+                    <pre><code data-line-numbers><style>
+div {
+    height: 5rem;
+    border: 1px tomato solid;
+    padding: 1rem;
+    margin: 1rem;
+}
+</style>
+<div>
+    Lorem ipsum dolor sit amet
+</div>
+                    </code></pre>
+                    <div class="div-example">
+                        Lorem ipsum dolor sit amet
+                    </div>
+                </section>
+                <section>
+                    <h2>Multiple Blocks</h2>
+                    <div class="div-example">
+                        Lorem ipsum dolor sit amet 1
+                    </div>
+                    <div class="div-example">
+                        Lorem ipsum dolor sit amet 2
+                    </div>
+                    <div class="div-example">
+                        Lorem ipsum dolor sit amet 3
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>Inline Code Example</h2>
+                    <pre><code data-line-numbers><style>
+div span {
+    font-size: 4rem;
+    color: red;
+}
+</style>
+<div>
+    <span>Lorem ipsum </span> <b>dolor sit </b> <i>amet consectetur </i>
+</div>
+</code></pre>
+                    <div class="div-example">
+                        <span>Lorem ipsum </span> <b>dolor sit </b>
+                        <i>amet consectetur </i>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <h2>Nested Block Elements</h2>
+                <div class="box parent">
+                    <div class="box child"></div>
+                    <div class="box child"></div>
+                </div>
+            </section>
+            <section>
+                <section>
+                    <h4>box-sizing: content-box or border-box</h4>
+                    <pre><code data-line-numbers><style>div {
+    width: 40%;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1rem dotted greenyellow;
+}</style></code></pre>
+
+                    <div class="two-columns">
+                        <h3>Content-box
+
+                        </h3>
+                        <h3>Border-box
+
+                        </h3>
+                    </div>
+                    <div class="two-columns">
+                        <div style=" 
+                    box-sizing: content-box;     
+                    width: 40%;
+                    padding: 1rem;
+                    margin:1rem ;
+                    border: 1rem dotted greenyellow;
+                    ">
+                            Does mean width-content = width </div>
+                        <div style="
+                    box-sizing: border-box;    
+                    width: 40%;
+                    padding: 1rem ;
+                    margin: 1rem ;
+                    border: 1rem dotted greenyellow;
+                    ">
+                            Width = content + padding + border
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Box model & dev tools</h3>
+                    <img src="./assets/img/box-model.png">
+                </section>
+            </section>
+
+            <section>
+                <h3>How to create beautiful announce</h3>
+                <img src="./assets/img/fake-picture.jpg" width="250">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores eveniet enim sunt dolorum,
+                    nobis, sapiente libero totam commodi impedit rem quae architecto ut mollitia! Eos esse autem
+                    pariatur nisi.</p>
+            </section>
+            <section>
+                <h3>Flow</h3>
+                <img src="./assets/img/fake-picture.jpg" width="250" style="
+                float: left;
+                margin-right: 1rem;
+                ">
+                <p style="text-align: left;"> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Fuga dolores eveniet enim sunt dolorum,
+                    nobis, sapiente libero totam commodi architecto ut mollitia!</p>
+
+                <pre><code data-line-numbers><img src="./assets/img/fake-picture.jpg" 
+                    width="250" style="
+    float: left;
+    margin-right: 1rem;">
+                    </code></pre>
+            </section>
+            <section>
+                <h3>float: right or float: left</h3>
+                <img src="./assets/img/fake-picture.jpg" width="200" style="
+                                float: left;
+                                margin-right: 1rem;
+                                ">
+                <p style="text-align: left;"> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Fuga dolores eveniet enim sunt dolorum,
+                    nobis, sapiente libero totam commodi architecto ut mollitia!</p>
+                <img src="./assets/img/fake-picture.jpg" width="200" style="float: right;margin-right: 1rem;">
+                <p style="text-align: left;"> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Fuga dolores eveniet enim sunt dolorum,
+                    nobis, sapiente libero totam commodi architecto ut mollitia!</p>
+            </section>
+            <section>
+                <p>The float CSS property places an element on the left or right side of its container.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+
+        // Also available as an ES module, see:
+        // https://revealjs.com/initialization/
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+        });
+
+    </script>
+
+</body>
+
+</html>
